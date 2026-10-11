@@ -6,6 +6,8 @@ Katalog anime modern berbahasa Indonesia — cepat, sinematik, dan sepenuhnya re
 
 **Live:** https://jelajanime.vercel.app
 
+![Tampilan Jelajanime](docs/preview.png)
+
 ---
 
 ## Fitur
