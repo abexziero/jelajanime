@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="Jelajanime">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCF5C7"/>
+      <stop offset="0.6" stop-color="#FFE6B0"/>
+      <stop offset="1" stop-color="#FFD79A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="10%" cy="0%" r="85%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#235C8F"/>
+      <stop offset="1" stop-color="#FFC069"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="440" fill="url(#bg)"/>
+  <rect width="1280" height="440" fill="url(#glow)"/>
+  <rect width="1280" height="440" filter="url(#grain)" opacity="0.05"/>
+  <circle cx="1092" cy="98" r="78" fill="#FFC069" opacity="0.5"/>
+  <circle cx="1178" cy="332" r="52" fill="#ADF7B6" opacity="0.55"/>
+  <circle cx="126" cy="350" r="46" fill="#235C8F" opacity="0.14"/>
+  <text x="640" y="222" text-anchor="middle" font-family="'Arial Black','Arial Bold',Arial,Helvetica,sans-serif" font-size="130" letter-spacing="1" fill="#2B2B26">JELAJANI<tspan fill="#8A5518">ME</tspan></text>
+  <text x="640" y="274" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="27" fill="#6E6755">Jelajahi anime, temukan ceritanya.</text>
+  <rect x="0" y="436" width="1280" height="4" fill="url(#rule)"/>
+</svg>
