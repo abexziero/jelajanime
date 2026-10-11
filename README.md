@@ -1,72 +1,71 @@
-# Jelajanime
+<img width="100%" src="assets/hero.svg" alt="Jelajanime" />
 
-> **Jelajahi anime, temukan ceritanya.**
+<p align="center">
+  <strong>Jelajahi anime, temukan ceritanya.</strong><br/>
+  Katalog anime modern berbahasa Indonesia — cepat, sinematik, sepenuhnya responsif.<br/>
+  Data dari AniList. Hanya menautkan sumber streaming legal.
+</p>
 
-Katalog anime modern berbahasa Indonesia — cepat, sinematik, dan sepenuhnya responsif. Temukan judul, lihat detail kaya (jalan cerita, fakta, karakter, rekomendasi), dan tonton trailer resmi. **Hanya menautkan sumber streaming legal** — tanpa konten bajakan.
+<p align="center">
+  <a href="https://jelajanime.vercel.app"><img src="https://img.shields.io/badge/Kunjungi%20Situs-FFC069?style=for-the-badge&logo=vercel&logoColor=black" alt="Live" /></a>
+  <a href="https://github.com/abexziero/jelajanime"><img src="https://img.shields.io/badge/Star%20Repo-235C8F?style=for-the-badge&logo=github&logoColor=white" alt="Star" /></a>
+</p>
 
-**Live:** https://jelajanime.vercel.app
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/GSAP_3-88CE02?style=for-the-badge&logo=greensock&logoColor=black" alt="GSAP" />
+  <img src="https://img.shields.io/badge/Data-AniList-02A9FF?style=for-the-badge&logo=anilist&logoColor=white" alt="AniList" />
+</p>
 
-![Tampilan Jelajanime](docs/preview.png)
+<p align="center"><img width="100%" src="docs/preview.png" alt="Tampilan Jelajanime" /></p>
+<p align="center"><sub>Beranda — hero carousel dengan latar video trailer.</sub></p>
 
----
+<img width="100%" src="assets/band-fitur.svg" alt="Fitur" />
 
-## Fitur
+<table>
+  <tr>
+    <td><strong>Beranda sinematik</strong><br/>Hero carousel 5 anime trending, latar video trailer, auto-rotate, jeda saat hover.</td>
+    <td><strong>Detail lengkap</strong><br/>Meta, genre, sinopsis, karakter, daftar episode, rekomendasi.</td>
+  </tr>
+  <tr>
+    <td><strong>Pencarian instan</strong><br/>Command-bar di navbar (<code>/</code>), debounce 300 ms, saran poster.</td>
+    <td><strong>Jelajahi / Browse</strong><br/>Filter genre, format, status, tahun + pagination.</td>
+  </tr>
+  <tr>
+    <td><strong>Watchlist</strong><br/>Tersimpan di <code>localStorage</code>, sinkron antar-tab.</td>
+    <td><strong>Trailer modal</strong><br/>Pemutar <code>youtube-nocookie</code> di dialog native.</td>
+  </tr>
+</table>
 
-- **Beranda sinematik** — hero carousel dari 5 anime trending, latar video trailer YouTube (muted/loop), auto-rotate, indikator titik, panah navigasi, dan jeda saat hover/fokus.
-- **Detail anime lengkap** — banner, poster, meta (skor, tahun, format, episode, durasi, studio, status), chip genre, sinopsis, karakter utama, dan rekomendasi.
-- **Fakta & wawasan** — sumber adaptasi (manga/novel/orisinal), negara, tanggal tayang, popularitas, favorit, hashtag, tag ter-peringkat, peringkat all-time, dan serial terkait (prequel/sequel/spin-off).
-- **Daftar episode** — thumbnail episode dari data AniList (opsional per judul).
-- **Karakter & staf** — halaman khusus dengan bio lengkap karakter (gender, umur, golongan darah) dan seiyuu (pengisi suara Jepang); bio ber-spoiler disembunyikan secara default.
-- **Pencarian instan** — command-bar di navbar (shortcut `/`), debounce 300 ms, dropdown saran dengan poster, plus halaman hasil `/search`.
-- **Jelajahi / Browse** — filter genre, format (TV/OVA/ONA/Movie), status (tayang/selesai/belum), tahun, dan urutan; dilengkapi pagination.
-- **Watchlist** — simpan/buang anime, tersimpan lokal di browser (`localStorage`), sinkron antar-tab, dengan halaman daftar tersendiri.
-- **Trailer modal** — pemutar YouTube (`youtube-nocookie`) di dialog native, dibuka tanpa suara dengan tombol mute/unmute.
-- **Tonton resmi** — tombol tautan ke layanan streaming legal (Crunchyroll, Netflix, Prime Video, Disney+, Bilibili, HIDIVE, Muse Asia, dsb.) dari `externalLinks` AniList.
-- **Tema terang "Morning Sunshine & Serenity"** — palet hangat (Cream, Warm Sunshine, Soft Sky Blue, Lively Mint) dengan kontras yang diuji (WCAG AA).
-- **Animasi halus** — GSAP (entrance hero, reveal saat scroll, Flip reflow watchlist) + View Transitions poster→detail; semua dinonaktifkan saat `prefers-reduced-motion`.
-- **Aksesibel & responsif** — keyboard-friendly, `aria` tepat, dari ponsel 360 px hingga desktop.
-- **State lengkap** — skeleton loading, empty state, halaman 404 & error yang ramah.
-- **SEO & share** — metadata dinamis, OG image yang di-generate, favicon kustom.
+<img width="100%" src="assets/band-galeri.svg" alt="Galeri" />
 
----
+<p align="center"><img width="100%" src="docs/preview.png" alt="Beranda Jelajanime" /></p>
+<p align="center"><sub>Beranda — hero carousel dengan latar video trailer.</sub></p>
 
-## Tech Stack
+<img width="100%" src="assets/band-stack.svg" alt="Tech Stack" />
 
-| Lapisan | Teknologi |
-|---|---|
-| Framework | **Next.js 16** (App Router, Turbopack, Cache Components/PPR, Partial Prefetching) |
-| UI | **React 19** + **TypeScript** |
-| Styling | **Tailwind CSS v4** (token via `@theme`, CSS variables) |
-| Animasi | **GSAP 3** + `@gsap/react` (`ScrollTrigger`, `SplitText`, `Flip`) |
-| Data | **AniList GraphQL API** (gratis, tanpa API key) |
-| Gambar | `next/image` (remote pattern `s4.anilist.co`) |
-| Font | `next/font` — Bebas Neue (display) + Inter (body) |
-| State klien | `localStorage` via `useSyncExternalStore` (watchlist) |
-| Deploy | **Vercel** (auto-deploy dari GitHub) |
+<table>
+  <tr><th>Lapisan</th><th>Teknologi</th></tr>
+  <tr><td>Framework</td><td><strong>Next.js 16</strong> (App Router, Turbopack, PPR)</td></tr>
+  <tr><td>UI</td><td><strong>React 19</strong> + <strong>TypeScript</strong></td></tr>
+  <tr><td>Styling</td><td><strong>Tailwind CSS v4</strong> (token <code>@theme</code>)</td></tr>
+  <tr><td>Animasi</td><td><strong>GSAP 3</strong> + <code>@gsap/react</code></td></tr>
+  <tr><td>Data</td><td><strong>AniList GraphQL API</strong> (tanpa API key)</td></tr>
+  <tr><td>Deploy</td><td><strong>Vercel</strong> (auto-deploy dari GitHub)</td></tr>
+</table>
 
----
+<img width="100%" src="assets/band-arsitektur.svg" alt="Arsitektur" />
 
-## Arsitektur Singkat
-
+```text
+UI (App Router) → CatalogProvider → adapter anilist → AniList GraphQL API
 ```
-app/                 # Route App Router (home, /browse, /search, /watchlist, /anime/[id], …)
-components/
-  layout/            # Navbar (kapsul melayang), mega-menu, footer
-  anime/             # Hero carousel, kartu, trailer modal, watchlist, dsb.
-  browse/ search/ ui/ anim/
-lib/
-  providers/         # Interface CatalogProvider + adapter AniList
-  genres.ts gsap.ts filters.ts watchlist.tsx
-config/site.ts       # Nama, tagline, deskripsi, URL
-```
 
-- **Provider-agnostik** — antarmuka `CatalogProvider` memisahkan UI dari sumber data; adapter `anilist` adalah implementasi default. Menambah sumber lain = membuat adapter baru.
-- **Server-side fetch** dengan ISR (`revalidate`) dan tag cache.
-- **Normalisasi data** di layer provider (skor 0–100 → 0–10, pembersihan HTML/Markdown, format tanggal, filter tautan `https`).
+Provider-agnostik: UI terpisah dari sumber data. Ganti sumber = buat adapter baru.
 
----
-
-## Menjalankan Lokal
+<img width="100%" src="assets/band-mulai.svg" alt="Menjalankan Lokal" />
 
 ```bash
 npm install      # .npmrc sudah mengatasi allow-scripts
@@ -76,16 +75,6 @@ npm run typecheck
 npm run build
 ```
 
-Opsional — buat `.env.local` dari `.env.example`:
-
-```
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
-
-> Di Vercel, URL produksi terdeteksi otomatis (fallback ke `VERCEL_PROJECT_PRODUCTION_URL`).
-
 ---
 
-## Lisensi & Atribusi
-
-Data anime berasal dari **[AniList](https://anilist.co)**. Jelajanime tidak berafiliasi dengan AniList. Proyek ini **tidak** meng-host atau menyalurkan video berhak cipta; tautan tonton mengarah ke layanan resmi berlisensi.
+Data anime dari [AniList](https://anilist.co). Jelajanime tidak berafiliasi dengan AniList dan **tidak** meng-host video berhak cipta — tautan tonton mengarah ke layanan resmi berlisensi.
