@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palet "Morning Sunshine & Serenity" — tema terang. */
+  --color-ink: #fcf5c7; /* Cream White — latar halaman */
+  --color-surface: #ffffff; /* panel/kartu */
+  --color-surface-2: #fff7da; /* panel sekunder / skeleton */
+  --color-line: #e7deb4; /* garis/border */
+  --color-foreground: #2b2b26; /* teks utama (ink gelap) */
+  --color-muted: #6e6755; /* teks sekunder (abu hangat, kontras AA di cream) */
+  --color-accent: #ffc069; /* Warm Sunshine — aksen utama (bg/border) */
+  --color-accent-text: #8a5518; /* oranye tua — aksen untuk TEKS (kontras di cream) */
+  --color-accent-deep: #235c8f; /* Sky Dark — aksen sekunder (aman untuk teks) */
+  --color-mint: #adf7b6; /* Lively Mint — aksen positif */
+  /* Scrim tetap gelap: dipakai agar teks di atas gambar tetap terbaca. */
+  --color-scrim: #1a1712;
+
+  --font-display: var(--font-bebas);
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-foreground);
+  }
+}
+
+/* View Transitions: morph poster→detail. Overlay tak boleh menangkap klik. */
+::view-transition {
+  pointer-events: none;
+}
+
+/*
+ * Film grain halus (SVG feTurbulence, tanpa aset). Dipakai sebagai overlay
+ * dekoratif untuk memberi tekstur "cinematic" — pengganti blob glow.
+ * Murah: satu data-URI, tanpa animasi/JS.
+ */
+.film-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Spotlight sudut tipis — arah baca dari judul, bukan orb blur. */
+.edge-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 90% at 12% 100%,
+    color-mix(in oklab, var(--mood, var(--color-accent)) 22%, transparent) 0%,
+    transparent 55%
+  );
+}
+
+/* Hormati preferensi gerak-minim: matikan semua animasi view-transition. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
